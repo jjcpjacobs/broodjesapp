@@ -8,7 +8,8 @@ WORKDIR /usr/src/app
 COPY . .
 
 RUN npm install
-RUN npm install -g nodemon
 
 #EXPOSE 3000
-CMD [ "nodemon", "-e", "js,html",  "app" ]
+#CMD [ "node", "app.js" ]
+
+#"start": "nodemon -e js,mustache ./server.js"

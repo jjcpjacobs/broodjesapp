@@ -10,4 +10,6 @@ COPY . .
 RUN npm install
 
 #EXPOSE 3000
-CMD [ "node", "app" ]
+#CMD [ "node", "app.js" ]
+
+#"start": "nodemon -e js,mustache ./server.js"

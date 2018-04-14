@@ -3,7 +3,7 @@ version: "2"
 services:
   nodejs:
     build: .
-#    command: nodemon app.js
+    command: node_modules/.bin/nodemon -L app.js
     ports:
       - "3000:3000"
     volumes:

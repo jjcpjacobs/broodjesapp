@@ -9,12 +9,6 @@
   },
   "dependencies": {
     "express":"^4.16.3",
-    "nodemon": "^1.17.3",
-    "chokidar": "^2.0.3"
-  },
-  "devDependencies": {
-    "express":"^4.16.3",
-    "nodemon": "^1.17.3",
-    "chokidar": "^2.0.3"
+    "nodemon": "^1.17.3"
   }
 }

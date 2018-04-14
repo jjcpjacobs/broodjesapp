@@ -2,22 +2,11 @@ version: "2"
 
 services:
   nodejs:
-    build: ./nodejs
+    build: .
+    command: nodemon app.js
     ports:
-      - "8080:8080"
+      - "3000:3000"
     volumes:
-      - ./projects:/usr/src/app
-    container_name: webserver
-
-  mongodb:
-    image: mongo:latest
-    volumes:
-       - mongodata:/data/db
-    container_name: mongodb
-    hostname: mongo
-    ports:
-      - 27017:27017
-
-volumes:
-  mongodata:
-    driver: local
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    container_name: nodejs

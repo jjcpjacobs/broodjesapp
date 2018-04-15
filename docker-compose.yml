@@ -10,3 +10,18 @@ services:
       - .:/usr/src/app
       - /usr/src/app/node_modules
     container_name: nodejs
+    links:
+      - mongodb
+
+  mongodb:
+    image: mongo
+    volumes:
+       - mongodata:/data/db
+    container_name: mongodb
+    hostname: mongodb
+    ports:
+      - 27017:27017
+
+volumes:
+  mongodata:
+    driver: local
